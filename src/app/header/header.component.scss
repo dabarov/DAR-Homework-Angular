@@ -1,0 +1,35 @@
+:host {
+  font-size: 18px;
+}
+
+.header {
+  padding: 0.5rem 1.2rem;
+  background-color: #197dd2;
+}
+
+.nav-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  .nav-item {
+    margin-right: 10px;
+    color: #fff;
+    font-weight: 500;
+    a {
+      text-decoration: none;
+      color: #fff;
+      &.disabled {
+        color: #9e9e9e;
+        pointer-events: none;
+      }
+    }
+  }
+  .login-btn {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+}
