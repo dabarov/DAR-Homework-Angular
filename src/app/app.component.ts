@@ -26,4 +26,22 @@ export class AppComponent {
       url: '',
     },
   ];
+
+  sideNavItemsFromApp: NavItem[] = [
+    {
+      title: 'Dashboard',
+      enabled: true,
+      url: '/dashboard',
+    },
+    {
+      title: 'Statistics',
+      enabled: true,
+      url: '/stats',
+    },
+    {
+      title: 'Settings',
+      enabled: true,
+      url: '/settings',
+    },
+  ];
 }
