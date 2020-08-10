@@ -9,21 +9,4 @@ import { NavItem } from './shared/types';
 export class AppComponent {
   title = 'DAR-Homework-Angular';
 
-  navItemsFromApp: NavItem[] = [
-    {
-      title: 'Users',
-      enabled: true,
-      url: '/users',
-    },
-    {
-      title: 'Videos',
-      enabled: false,
-      url: '/videos',
-    },
-    {
-      title: 'Room',
-      enabled: true,
-      url: '',
-    },
-  ];
 }

@@ -3,3 +3,10 @@ export interface NavItem {
   enabled: boolean;
   url: string;
 }
+
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  username: string;
+}
