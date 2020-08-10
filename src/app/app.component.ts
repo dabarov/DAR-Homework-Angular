@@ -9,6 +9,8 @@ import { NavItem } from './shared/types';
 export class AppComponent {
   title = 'DAR-Homework-Angular';
 
+  logoPathFromApp = '../assets/logo.svg';
+
   navItemsFromApp: NavItem[] = [
     {
       title: 'Users',
