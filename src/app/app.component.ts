@@ -9,6 +9,8 @@ import { NavItem } from './shared/types';
 export class AppComponent {
   title = 'DAR-Homework-Angular';
 
+  logoPathFromApp = '../assets/logo.svg';
+
   navItemsFromApp: NavItem[] = [
     {
       title: 'Users',
@@ -24,6 +26,24 @@ export class AppComponent {
       title: 'Room',
       enabled: true,
       url: '',
+    },
+  ];
+
+  sideNavItemsFromApp: NavItem[] = [
+    {
+      title: 'Dashboard',
+      enabled: true,
+      url: '/dashboard',
+    },
+    {
+      title: 'Statistics',
+      enabled: true,
+      url: '/stats',
+    },
+    {
+      title: 'Settings',
+      enabled: true,
+      url: '/settings',
     },
   ];
 }

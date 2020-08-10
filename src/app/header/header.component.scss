@@ -7,6 +7,12 @@
   background-color: #197dd2;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav-wrapper {
   list-style: none;
   padding: 0;

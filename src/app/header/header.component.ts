@@ -12,6 +12,9 @@ export class HeaderComponent implements OnInit {
   @Input()
   navItems: NavItem[] = [];
 
+  @Input()
+  logoPath: string = '';
+
   constructor() {}
 
   ngOnInit(): void {}
