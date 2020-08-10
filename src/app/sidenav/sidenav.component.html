@@ -1,3 +1,5 @@
 <div class="sidenav-wrapper">
-    
+    <ng-container *ngFor="let item of sideNavItems">
+        <span class="sidenav-item"><a [href]="item.url">{{ item.title }}</a></span>
+    </ng-container>
 </div>

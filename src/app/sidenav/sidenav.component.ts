@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NavItem } from '../shared/types';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent {
-    
+  @Input()
+  sideNavItems: NavItem[] = [];
 }

@@ -21,4 +21,8 @@ describe('SidenavComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('input sideNavItems should be defined', () => {
+    expect(component.sideNavItems).toBeTruthy();
+  });
 });
