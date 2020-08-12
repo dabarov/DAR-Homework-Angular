@@ -20,9 +20,9 @@ export interface SingleUser {
   website: string;
   address: {
     street: string;
-    suite: string
+    suite: string;
   };
   company: {
     name: string;
-  }
+  };
 }
