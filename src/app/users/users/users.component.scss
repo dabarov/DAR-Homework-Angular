@@ -1,12 +1,20 @@
 .users-table {
-    table {
-        width: 100%;
-        background-color: #fff;
-
-        th, td {
-            text-align: center;
-            padding: 0.5rem 1rem;
-            border: 1px solid #efefef;
-        }
+  overflow-x: auto;
+  table {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    tr:hover {
+      &.user-item {
+        background-color: #f5f5f5;
+        cursor: pointer;
+      }
     }
+    th,
+    td {
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border: 1px solid #efefef;
+    }
+  }
 }

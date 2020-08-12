@@ -1,0 +1,30 @@
+a {
+  text-decoration: none;
+  color: #197dd2;
+}
+.user-profile {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .username {
+    color: gray;
+    margin-top: 0%;
+    margin-bottom: 2.5em;
+  }
+  table {
+    align-self: center;
+    border-collapse: collapse;
+    border-spacing: 1em;
+    tr {
+      td {
+        padding: 1em;
+        border-bottom: 1px solid #ddd;
+        &:nth-child(1) {
+          color: gray;
+        }
+      }
+    }
+  }
+}
