@@ -1,17 +1,24 @@
 <h1>Users list!</h1>
 <div class="users-table">
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        <tr class="user-item" *ngFor = "let user of users" (click)="navigateToUser(user.id)">
-            <td>{{user.id}}</td>
-            <td>{{user.username}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.email}}</td>
-        </tr>
-    </table>
+  <input type="text" [(ngModel)]="searchInput" />
+  <button (click)="clearSearchInput()">Clear</button>
+  <button (click)="search()">Search</button>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <tr
+      class="user-item"
+      *ngFor="let user of users$ | async"
+      (click)="navigateToUser(user.id)"
+    >
+      <td>{{ user.id }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </table>
 </div>
