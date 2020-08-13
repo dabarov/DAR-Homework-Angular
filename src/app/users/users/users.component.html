@@ -7,7 +7,7 @@
             <th>Name</th>
             <th>Email</th>
         </tr>
-        <tr *ngFor = "let user of users" (click)="navigateToUser(user.id)">
+        <tr class="user-item" *ngFor = "let user of users" (click)="navigateToUser(user.id)">
             <td>{{user.id}}</td>
             <td>{{user.username}}</td>
             <td>{{user.name}}</td>
