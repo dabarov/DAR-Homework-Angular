@@ -4,15 +4,18 @@
     <ul class="nav-wrapper" *ngIf="navItems">
       <ng-container *ngFor="let navItem of navItems">
         <li class="nav-item" *ngIf="navItem.enabled">
-          <a [routerLink]=[navItem.url] [ngClass]="{ disabled: !navItem.url }">
+          <a
+            [routerLink]="[navItem.url]"
+            [ngClass]="{ disabled: !navItem.url }"
+          >
             {{ navItem.title }}
           </a>
         </li>
       </ng-container>
       <li *ngIf="showLoginBtn">
-        <button type="button" class="login-btn" (click)="onLoginClick()">
+        <div [routerLink]="['/login']" class="login-btn">
           Login
-        </button>
+        </div>
       </li>
     </ul>
   </nav>

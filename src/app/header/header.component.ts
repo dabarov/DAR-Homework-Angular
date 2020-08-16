@@ -19,8 +19,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onLoginClick() {
-    alert('Welcome!');
-    this.showLoginBtn = false;
-  }
+  // onLoginClick() {
+  //   this.showLoginBtn = false;
+  // }
 }
