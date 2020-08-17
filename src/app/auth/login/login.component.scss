@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 2em;
+  input {
+    font-size: 1rem;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 200px;
+  }
+  button {
+    display: block;
+    font-size: 1rem;
+    background-color: #197dd2;
+    color: #fff;
+    padding: 1em;
+    width: 220px;
+    cursor: pointer;
+    border: 1px solid #197dd2;
+    &:hover {
+      background-color: #fff;
+      color: #197dd2;
+      transition: 300ms;
+    }
+  }
+}

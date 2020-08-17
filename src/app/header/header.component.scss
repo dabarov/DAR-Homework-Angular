@@ -19,6 +19,7 @@ nav {
   margin: 0;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 
   .nav-item {
     margin-right: 10px;
@@ -34,8 +35,17 @@ nav {
     }
   }
   .login-btn {
+    padding: 0.2em;
+    font-size: 0.8em;
     background: none;
     border: 1px solid #fff;
+    border-radius: 5px;
     color: #fff;
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: #197dd2;
+      transition: 200ms;
+    }
   }
 }
