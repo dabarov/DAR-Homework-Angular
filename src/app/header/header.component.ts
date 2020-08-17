@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NavItem } from '../shared/types';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,17 +8,19 @@ import { NavItem } from '../shared/types';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  showLoginBtn = true;
-
   @Input()
   navItems: NavItem[] = [];
 
   @Input()
   logoPath: string = '';
 
-  constructor() {}
+  isLoggedIn: boolean;
 
-  ngOnInit(): void {}
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.isLoggedIn$.subscribe((val) => (this.isLoggedIn = val));
+  }
 
   // onLoginClick() {
   //   this.showLoginBtn = false;

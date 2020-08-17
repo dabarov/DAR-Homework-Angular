@@ -1,0 +1,9 @@
+<div class="login-form">
+  <h1>Register</h1>
+  <div class="error-wrapper" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+  <input placeholder="Username" [(ngModel)]="username" type="text" />
+  <input placeholder="Password" [(ngModel)]="password" type="password" />
+  <button type="button" (click)="login()">Sign up</button>
+</div>

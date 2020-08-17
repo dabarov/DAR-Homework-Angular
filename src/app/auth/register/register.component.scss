@@ -11,38 +11,28 @@ h1 {
   input {
     font-size: 1rem;
     padding: 0.5em;
-    margin-top: 1em;
+    margin-bottom: 1em;
     width: 200px;
   }
   button {
     display: block;
     font-size: 1rem;
-    background-color: #197dd2;
+    background-color: orange;
     color: #fff;
     padding: 1em;
     width: 220px;
     cursor: pointer;
-    border: 1px solid #197dd2;
-    margin: 1rem 0rem;
+    border: 1px solid orange;
     &:hover {
       background-color: #fff;
-      color: #197dd2;
+      color: orange;
       transition: 300ms;
     }
   }
-  a {
-    text-decoration: none;
-    color: orange;
-  }
   .error-wrapper {
-    background-color: #197dd2;
+    background-color: #ffcc80;
     color: #fff;
     padding: 0.5em;
     margin-bottom: 1em;
-  }
-  .form-error {
-    color: red;
-    font-size: 0.75rem;
-    margin: 0 0.3rem;
   }
 }
