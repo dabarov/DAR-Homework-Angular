@@ -19,7 +19,7 @@
       </li>
       <ng-template #showLogout>
         <li>
-          <div [routerLink]="['/auth/logout']" class="login-btn">
+          <div (click)="logout()" [routerLink]="['/auth/login']" class="login-btn">
             Logout
           </div>
         </li>
