@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     this.authService.isLoggedIn$.subscribe((val) => (this.isLoggedIn = val));
   }
 
-  // onLoginClick() {
-  //   this.showLoginBtn = false;
-  // }
+  logout() {
+    this.authService.logout();
+  }
 }

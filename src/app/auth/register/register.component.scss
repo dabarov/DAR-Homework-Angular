@@ -2,7 +2,7 @@ h1 {
   text-align: center;
 }
 
-.login-form {
+.register-form {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -11,7 +11,7 @@ h1 {
   input {
     font-size: 1rem;
     padding: 0.5em;
-    margin-bottom: 1em;
+    margin-top: 1em;
     width: 200px;
   }
   button {
@@ -23,6 +23,7 @@ h1 {
     width: 220px;
     cursor: pointer;
     border: 1px solid orange;
+    margin: 1rem 0rem;
     &:hover {
       background-color: #fff;
       color: orange;
@@ -34,5 +35,11 @@ h1 {
     color: #fff;
     padding: 0.5em;
     margin-bottom: 1em;
+  }
+  .form-error {
+    font-weight: bold;
+    color: red;
+    font-size: 0.75rem;
+    margin: 0 0.5em;
   }
 }

@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.errorMessage = '';
-    console.log(this.form);
 
     if (this.form.invalid) {
       return;
@@ -46,7 +45,6 @@ export class LoginComponent implements OnInit {
         })
       )
       .subscribe((res) => {
-        console.log('AUTH', res);
         this.authService.setLoggedIn(res);
         this.router.navigate(['/']);
       });

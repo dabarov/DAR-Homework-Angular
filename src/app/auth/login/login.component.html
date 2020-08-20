@@ -4,26 +4,26 @@
     <div class="error-wrapper" *ngIf="errorMessage">
       {{ errorMessage }}
     </div>
-    <input placeholder="Username" formControlName="username" type="text" />
+    <input placeholder="Email" formControlName="username" type="text" />
     <div
       class="form-error"
       *ngIf="form.get('username').touched && form.get('username').invalid"
     >
-      <span *ngIf="form.get('username').errors.required"
-        >This field is required</span
-      >
-      <span *ngIf="form.get('username').errors.email"
-        >Please enter valid email</span
-      >
+      <span *ngIf="form.get('username').errors.required">
+        This field is required
+      </span>
+      <span *ngIf="form.get('username').errors.email">
+        Please enter valid email
+      </span>
     </div>
     <input placeholder="Password" formControlName="password" type="password" />
     <div
       class="form-error"
       *ngIf="form.get('password').touched && form.get('password').invalid"
     >
-      <span *ngIf="form.get('password').errors.required"
-        >This field is required</span
-      >
+      <span *ngIf="form.get('password').errors.required">
+        This field is required
+      </span>
     </div>
     <button type="button" (click)="login()">Sign in</button>
     <a [routerLink]="['/auth/register/']">Sign up</a>

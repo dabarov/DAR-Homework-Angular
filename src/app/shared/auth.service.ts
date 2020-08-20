@@ -31,6 +31,13 @@ export class AuthService {
     this.authInfo = authInfo;
     this.isLoggedIn.next(true);
   }
+
+  logout() {
+    localStorage.removeItem('dar-lab-auth');
+    this.authInfo = null;
+    this.isLoggedIn.next(false);
+  }
+
   login(username: string, password: string) {
     const data = {
       grant_type: 'password',
