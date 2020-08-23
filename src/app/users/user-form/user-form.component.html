@@ -1,0 +1,48 @@
+<div *ngIf="user">
+  <h1>Edit user {{ user.username }}</h1>
+  <form [formGroup]="form">
+    <div class="user-info-block" formGroupName="commonInfo">
+      <h2>Common info</h2>
+      <div
+        class="form-group"
+        *ngFor="let controlConfig of fieldNameMap.commonInfo"
+      >
+        <label class="form-control-label">{{ controlConfig.label }}</label>
+        <input
+          class="form-control"
+          type="text"
+          [formControlName]="controlConfig.field"
+        />
+        <div class="form-control-error"></div>
+      </div>
+    </div>
+    <div class="user-info-block" formGroupName="company">
+      <h2>Company</h2>
+      <div
+        class="form-group"
+        *ngFor="let controlConfig of fieldNameMap.company"
+      >
+        <label class="form-control-label">{{ controlConfig.label }}</label>
+        <input
+          class="form-control"
+          type="text"
+          [formControlName]="controlConfig.field"
+        />
+        <div class="form-control-error"></div>
+      </div>
+      <div class="bs-list">
+        <h3>Business sectors</h3>
+        <div
+          class="form-group inner"
+          *ngFor="let control of bsFormArray.controls"
+        >
+          <input class="form-control" type="text" [formControl]="control" />
+        </div>
+        <button (click)="addBS()">Add business sector</button>
+      </div>
+    </div>
+    <div class="user-info-block">
+      <h2>Address</h2>
+    </div>
+  </form>
+</div>

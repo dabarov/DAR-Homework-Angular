@@ -9,13 +9,6 @@ export interface User {
   name: string;
   email: string;
   username: string;
-}
-
-export interface SingleUser {
-  id: number;
-  name: string;
-  email: string;
-  username: string;
   phone: string;
   website: string;
   address: {
@@ -24,6 +17,7 @@ export interface SingleUser {
   };
   company: {
     name: string;
+    bs: string;
   };
 }
 

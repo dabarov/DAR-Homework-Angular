@@ -1,6 +1,7 @@
 <p><a [routerLink]="['/users']">< Back to Users</a></p>
 <ng-container *ngIf="user">
   <div class="user-profile">
+    <a [routerLink]="['/users/form/', user.id]">Edit</a>
     <h1>{{ user.name | uppercase }}</h1>
     <p class="username">{{ user.username }}</p>
     <table>

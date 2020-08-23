@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User, SingleUser } from 'src/app/shared/types';
+import { User } from 'src/app/shared/types';
 import { catchError } from 'rxjs/operators';
 import { of, Observable, throwError } from 'rxjs';
 
@@ -19,9 +19,9 @@ export class UserService {
       );
   }
 
-  getUser(id: number): Observable<SingleUser> {
+  getUser(id: number): Observable<User> {
     return this.httpClient
-      .get<SingleUser>(`https://jsonplaceholder.typicode.com/users/${id}`)
+      .get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
       .pipe(
         catchError((err) => {
           console.log('Error trying get Users', err);
