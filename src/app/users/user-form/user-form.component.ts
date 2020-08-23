@@ -24,6 +24,20 @@ const fields = {
     },
     bs: [],
   },
+  address: {
+    street: {
+      validators: ['required'],
+    },
+    suite: {
+      validators: ['required'],
+    },
+    city: {
+      validators: ['required'],
+    },
+    zipcode: {
+      validators: ['required'],
+    },
+  },
 };
 
 @Component({
@@ -65,6 +79,24 @@ export class UserFormComponent implements OnInit {
         field: 'catchPhrase',
       },
     ],
+    address: [
+      {
+        label: 'Street',
+        field: 'street',
+      },
+      {
+        label: 'Suite',
+        field: 'suite',
+      },
+      {
+        label: 'City',
+        field: 'city',
+      },
+      {
+        label: 'Zipcode',
+        field: 'zipcode',
+      },
+    ],
   };
 
   constructor(private route: ActivatedRoute) {}
@@ -104,10 +136,10 @@ export class UserFormComponent implements OnInit {
       });
     });
 
-    console.log(this.form);
     this.route.data.subscribe(({ user }) => {
       this.user = user;
       this.form.get('commonInfo').patchValue(this.user);
+      this.form.get('address').patchValue(this.user.address);
       this.form.get('company').patchValue({ ...this.user.company, bs: [] });
       this.user.company.bs.split(' ').forEach((bsEl) => {
         this.bsFormArray.push(new FormControl(bsEl));
@@ -117,5 +149,24 @@ export class UserFormComponent implements OnInit {
 
   addBS() {
     this.bsFormArray.push(new FormControl(''));
+  }
+
+  deleteBs(index) {
+    this.bsFormArray.removeAt(index);
+  }
+
+  save() {
+    console.log(this.user);
+    Object.keys(fields).forEach((groupKey) => {
+      Object.keys(fields[groupKey]).forEach((fieldKey) => {
+        if (groupKey === "commonInfo") {
+          this.user[fieldKey] = this.form.value["commonInfo"][fieldKey]
+        }
+        else {
+          this.user[groupKey][fieldKey] = this.form.value[groupKey][fieldKey]
+        }
+      });
+    });
+    console.log(this.user);
   }
 }

@@ -28,8 +28,45 @@ h1 {
 
 .bs-list {
   padding-left: 2rem;
-
   h3 {
     font-size: 0.75rem;
+  }
+  .bs-form {
+    display: flex;
+    align-content: center;
+    .delete-bs {
+      margin-left: 0.2rem;
+      font-size: 0.75rem;
+      height: 100%;
+      background-color: transparent;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      color: red;
+      &:hover {
+        cursor: pointer;
+        color: crimson;
+      }
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}
+
+.main-btn {
+  font-size: 1rem;
+  background-color: #197dd2;
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #197dd2;
+  &:hover {
+    background-color: #fff;
+    color: #197dd2;
+    transition: 300ms;
+  }
+  &.save {
+    width: 10rem;
   }
 }

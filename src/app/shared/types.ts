@@ -14,10 +14,13 @@ export interface User {
   address: {
     street: string;
     suite: string;
+    city: string;
+    zipcode: string;
   };
   company: {
     name: string;
     bs: string;
+    catchPhrase: string;
   };
 }
 
