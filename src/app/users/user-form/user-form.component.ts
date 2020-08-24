@@ -159,11 +159,14 @@ export class UserFormComponent implements OnInit {
     console.log(this.user);
     Object.keys(fields).forEach((groupKey) => {
       Object.keys(fields[groupKey]).forEach((fieldKey) => {
-        if (groupKey === "commonInfo") {
-          this.user[fieldKey] = this.form.value["commonInfo"][fieldKey]
-        }
-        else {
-          this.user[groupKey][fieldKey] = this.form.value[groupKey][fieldKey]
+        if (groupKey === 'commonInfo') {
+          this.user[fieldKey] = this.form.value['commonInfo'][fieldKey];
+        } else {
+          if (fieldKey === 'bs') {
+            this.user[groupKey][fieldKey] = this.form.value[groupKey][fieldKey].join(', ');
+          } else {
+            this.user[groupKey][fieldKey] = this.form.value[groupKey][fieldKey];
+          }
         }
       });
     });
